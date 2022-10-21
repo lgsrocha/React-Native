@@ -1,13 +1,12 @@
 import { remove, set, ref, push, onValue, child, update} from 'firebase/database';
 import React, {useState , useEffect, useRef} from 'react';
-import { SafeAreaView, StyleSheet, TextInput, View, Text, TouchableOpacity, FlatList, Keyboard, LogBox} from 'react-native';
+import { SafeAreaView, StyleSheet, TextInput, View, Text, TouchableOpacity, FlatList, Keyboard} from 'react-native';
 import Feather from "react-native-vector-icons/Feather"
 
 import Login from "./src/components/Login";
 import TaskList from './src/components/TaskList';
 import {database} from './src/services/firebaseConnection';
 
-LogBox.ignoreLogs(['Warning: Async Storage has been extracted from react-native core']);
 
 export default function App (){
   
@@ -42,6 +41,7 @@ export default function App (){
 
     }
     getUser()
+
   }
  ,[user])
 
